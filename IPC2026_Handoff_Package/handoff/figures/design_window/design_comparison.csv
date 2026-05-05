@@ -1,0 +1,9 @@
+quantity,value,unit
+thermo_optic_drift,72.075,pm_per_degC
+q5200_fwhm,298.0769230769231,pm
+adaptive_residual_window_q5200_snr25_100ghz,165.27675440256746,pm
+fixed_slicer_residual_window_q5200_snr25_100ghz,101.30915719699601,pm
+itio_voltage_for_adaptive_window,0.28060569508075967,V
+itio_temperature_range,20.81165452653486,degC
+default_package_severe_peak_temperature_rise,41.698734312559836,degC
+default_package_severe_peak_drift,3.00543627557775,nm
