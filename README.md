@@ -8,10 +8,10 @@ The study uses a first-order, reproducible link model with Lorentzian ring filte
 
 ## Paper
 
-- [Compiled PDF](IPC2026_Handoff_Package/handoff/docs/ipc2026_FINAL.pdf)
-- [LaTeX source](IPC2026_Handoff_Package/handoff/docs/ipc2026_FINAL.tex)
-- [Simulation script](IPC2026_Handoff_Package/handoff/code/ipc2026_cpo_design_window.py)
-- [Generated CSV/figure outputs](IPC2026_Handoff_Package/handoff/figures/design_window/)
+- [Compiled PDF](thermal-control-design-windows/docs/ipc2026_FINAL.pdf)
+- [LaTeX source](thermal-control-design-windows/docs/ipc2026_FINAL.tex)
+- [Simulation script](thermal-control-design-windows/code/ipc2026_cpo_design_window.py)
+- [Generated CSV/figure outputs](thermal-control-design-windows/figures/design_window/)
 
 ## Key Result
 
@@ -21,39 +21,39 @@ For a literature-reported `Q=5200` microring receiver at 100 GHz WDM spacing and
 
 ### BER Versus Residual Detuning
 
-![BER versus residual detuning](IPC2026_Handoff_Package/handoff/figures/design_window/paper_fig1_ber_vs_detuning.png)
+![BER versus residual detuning](thermal-control-design-windows/figures/design_window/paper_fig1_ber_vs_detuning.png)
 
 Residual resonance detuning is the control variable that matters after coarse tuning. The adaptive-pedestal case gives a wider lock window, while the fixed-slicer curve gives a more conservative receiver budget.
 
 ### Q, Spacing, and SNR Design Window
 
-![Design window heatmap](IPC2026_Handoff_Package/handoff/figures/design_window/paper_fig2_design_window_heatmap.png)
+![Design window heatmap](thermal-control-design-windows/figures/design_window/paper_fig2_design_window_heatmap.png)
 
 The heatmap summarizes how much residual detuning, in linewidths, remains below the nominal pre-FEC HD-FEC threshold for 50, 100, and 200 GHz WDM spacing. It shows the tradeoff between linewidth, WDM crosstalk, and receiver SNR.
 
 ### Tuning Requirement
 
-![Tuning requirements](IPC2026_Handoff_Package/handoff/figures/design_window/paper_fig3_tuning_requirements.png)
+![Tuning requirements](thermal-control-design-windows/figures/design_window/paper_fig3_tuning_requirements.png)
 
 Silicon's thermo-optic drift converts temperature rise into multi-nm wavelength correction. The plotted comparison separates coarse tuning range from the much smaller residual closed-loop lock accuracy needed for BER robustness.
 
 ### Package Thermal Stress Scenarios
 
-![Package thermal stress scenarios](IPC2026_Handoff_Package/handoff/figures/design_window/paper_fig5_package_thermal_scenarios.png)
+![Package thermal stress scenarios](thermal-control-design-windows/figures/design_window/paper_fig5_package_thermal_scenarios.png)
 
 Illustrative package-informed stress cases show how local photonic-layer temperature nonuniformity can vary across an eight-ring WDM engine. Cyan outlines mark cells exceeding the 1.5 nm fine-tuning range under the assumed 72 pm/C drift.
 
 ### Monte Carlo Cross-Check
 
-![Monte Carlo BER cross-check](IPC2026_Handoff_Package/handoff/figures/design_window/paper_fig4_mc_validation.png)
+![Monte Carlo BER cross-check](thermal-control-design-windows/figures/design_window/paper_fig4_mc_validation.png)
 
 The semi-analytic BER calculation is cross-checked against Monte Carlo PAM4 symbol streams with true Gray-coded bit-error counting near the HD-FEC crossing.
 
 ## Reproduce Figures
 
 ```powershell
-python .\IPC2026_Handoff_Package\handoff\code\ipc2026_cpo_design_window.py `
-  --out-dir .\IPC2026_Handoff_Package\handoff\figures\design_window
+python .\thermal-control-design-windows\code\ipc2026_cpo_design_window.py `
+  --out-dir .\thermal-control-design-windows\figures\design_window
 ```
 
 The script prints numerical sanity checks for:
@@ -66,7 +66,7 @@ The script prints numerical sanity checks for:
 ## Build Paper
 
 ```powershell
-cd .\IPC2026_Handoff_Package\handoff\docs
+cd .\thermal-control-design-windows\docs
 pdflatex -interaction=nonstopmode -halt-on-error ipc2026_FINAL.tex
 pdflatex -interaction=nonstopmode -halt-on-error ipc2026_FINAL.tex
 ```

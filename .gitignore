@@ -7,11 +7,11 @@
 __pycache__/
 *.pyc
 
-# Local/legacy handoff material not used by the final public paper repo.
-IPC2026_Handoff_Package/handoff/conference_materials/
-IPC2026_Handoff_Package/handoff/docs/IPC2026_Research_Handoff_Brief.pdf
-IPC2026_Handoff_Package/handoff/docs/ipc2026_FINAL_page-*.png
-IPC2026_Handoff_Package/handoff/code/ABANDONED_mrr_pnn_simulation.py
-IPC2026_Handoff_Package/handoff/code/ipc2026_parametric_thermal_figures.py
-IPC2026_Handoff_Package/handoff/code/ipc2026_thermal_ber_simulation_v2.py
-IPC2026_Handoff_Package/handoff/figures/*.png
+# Local/legacy material not used by the final public paper repo.
+thermal-control-design-windows/conference_materials/
+thermal-control-design-windows/docs/*Research*_Brief.pdf
+thermal-control-design-windows/docs/ipc2026_FINAL_page-*.png
+thermal-control-design-windows/code/ABANDONED_mrr_pnn_simulation.py
+thermal-control-design-windows/code/ipc2026_parametric_thermal_figures.py
+thermal-control-design-windows/code/ipc2026_thermal_ber_simulation_v2.py
+thermal-control-design-windows/figures/*.png
